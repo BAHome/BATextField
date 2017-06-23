@@ -35,11 +35,11 @@
 		C4297C901EF5241D005DDC30 /* UITextField+BAHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+BAHistory.h"; sourceTree = "<group>"; };
 		C4297C911EF5241D005DDC30 /* UITextField+BAHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+BAHistory.m"; sourceTree = "<group>"; };
 		C4297C941EF5244B005DDC30 /* BATextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATextField.h; sourceTree = "<group>"; };
-		C4297C951EF52497005DDC30 /* BAKit_ConfigurationDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAKit_ConfigurationDefine.h; sourceTree = "<group>"; };
 		C4297C961EF525CB005DDC30 /* UIView+BAFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BAFrame.h"; sourceTree = "<group>"; };
 		C4297C971EF525CB005DDC30 /* UIView+BAFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BAFrame.m"; sourceTree = "<group>"; };
 		C4297C991EF5265B005DDC30 /* BAKit_UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAKit_UserDefaults.h; sourceTree = "<group>"; };
 		C4297C9A1EF5265B005DDC30 /* BAKit_UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAKit_UserDefaults.m; sourceTree = "<group>"; };
+		C4738C301EFCBA4000608E17 /* BAKit_ConfigurationDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAKit_ConfigurationDefine.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				C4297C941EF5244B005DDC30 /* BATextField.h */,
-				C4297C951EF52497005DDC30 /* BAKit_ConfigurationDefine.h */,
+				C4738C301EFCBA4000608E17 /* BAKit_ConfigurationDefine.h */,
 				C4297C8E1EF5241D005DDC30 /* UITextField+BAKit.h */,
 				C4297C8F1EF5241D005DDC30 /* UITextField+BAKit.m */,
 				C4297C901EF5241D005DDC30 /* UITextField+BAHistory.h */,

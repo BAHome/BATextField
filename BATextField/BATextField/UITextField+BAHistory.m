@@ -29,7 +29,7 @@ static void *tableView_historyKey = @"tableView_historyKey";
  */
 - (void)ba_textFieldHistoryArraySynchronize
 {
-    if (BAKit_stringIsBlank(self.ba_textFieldID) || BAKit_stringIsBlank(self.text))
+    if (BAKit_stringIsBlank_pod(self.ba_textFieldID) || BAKit_stringIsBlank_pod(self.text))
     {
         return;
     }
@@ -167,7 +167,7 @@ static void *tableView_historyKey = @"tableView_historyKey";
 {
     UIButton *clearButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    if (BAKit_stringIsBlank(self.ba_clearButtonTitle))
+    if (BAKit_stringIsBlank_pod(self.ba_clearButtonTitle))
     {
         self.ba_clearButtonTitle = @"清楚历史内容";
     }
@@ -196,7 +196,7 @@ static void *tableView_historyKey = @"tableView_historyKey";
 
 - (NSArray *)ba_textFieldHistoryArray
 {
-    if (BAKit_stringIsBlank(self.ba_textFieldID))
+    if (BAKit_stringIsBlank_pod(self.ba_textFieldID))
     {
         return nil;
     }
