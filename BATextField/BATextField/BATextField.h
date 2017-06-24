@@ -26,6 +26,11 @@
  项目源码地址：
  OC 版 ：https://github.com/BAHome/BAWKWebView
  
+ 最新更新时间：2017-06-24 【倒叙】
+ 最新Version：【Version：1.0.2】
+ 更新内容：
+ 1.0.2.1、优化部分宏定义
+ 
  最新更新时间：2017-06-23 【倒叙】
  最新Version：【Version：1.0.1】
  更新内容：

@@ -76,7 +76,7 @@ static void *tableView_historyKey = @"tableView_historyKey";
     }
     
     CGRect frame1 = CGRectMake(self.x, self.bottom + 1, self.width, 1);
-    CGRect frame2 = CGRectMake(self.x, self.bottom + 1, self.width, MIN(BAKit_Margin_150 * 2, BAKit_Margin_40 * (self.ba_textFieldHistoryArray.count + 1)));
+    CGRect frame2 = CGRectMake(self.x, self.bottom + 1, self.width, MIN(BAKit_Margin_150_pod * 2, BAKit_Margin_40_pod * (self.ba_textFieldHistoryArray.count + 1)));
 
     self.tableView_history.frame = frame1;
     [self.superview addSubview:self.tableView_history];
@@ -158,7 +158,7 @@ static void *tableView_historyKey = @"tableView_historyKey";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return BAKit_Margin_40;
+    return BAKit_Margin_40_pod;
 }
 
 #pragma clang diagnostic pop
@@ -237,7 +237,7 @@ static void *tableView_historyKey = @"tableView_historyKey";
     if (!tableView2)
     {
         tableView2 = [[UITableView alloc] init];
-        tableView2.backgroundColor = BAKit_Color_Gray_11;
+        tableView2.backgroundColor = BAKit_Color_Gray_11_pod;
         tableView2.delegate = self;
         tableView2.dataSource = self;
         

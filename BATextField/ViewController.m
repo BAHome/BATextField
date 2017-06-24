@@ -28,7 +28,7 @@
 - (void)setupUI
 {
     self.title = @"BATextField";
-    self.view.backgroundColor = BAKit_Color_White;
+    self.view.backgroundColor = BAKit_Color_White_pod;
 }
 
 - (void)viewDidLayoutSubviews
@@ -81,10 +81,10 @@
     {
         _textField = [UITextField new];
         _textField.placeholder = @"这里是 placeholder！限制最大位数：6！";
-        _textField.backgroundColor = BAKit_Color_Gray_11;
+        _textField.backgroundColor = BAKit_Color_Gray_11_pod;
         
         // placeholder：文字颜色
-        _textField.ba_placeholderColor = BAKit_Color_Green;
+        _textField.ba_placeholderColor = BAKit_Color_Green_pod;
         // placeholder：文字字体
         _textField.ba_placeholderFont = [UIFont systemFontOfSize:11];
         // 限制最大输入长度
@@ -101,11 +101,11 @@
     {
         _textField1 = [UITextField new];
         _textField1.placeholder = @"点击 return 后，可以保存输入历史！【限制输入11位】";
-        _textField1.backgroundColor = BAKit_Color_Gray_11;
+        _textField1.backgroundColor = BAKit_Color_Gray_11_pod;
         _textField1.delegate = self;
         
         // placeholder：文字颜色，默认：黑色
-        _textField1.ba_placeholderColor = BAKit_Color_Orange;
+        _textField1.ba_placeholderColor = BAKit_Color_Orange_pod;
         // placeholder：文字字体
         _textField1.ba_placeholderFont = [UIFont boldSystemFontOfSize:13];
         // 限制最大输入长度
@@ -116,7 +116,7 @@
         // clearButton 标题，默认：清楚历史内容
         _textField1.ba_clearButtonTitle = @"clear";
         // clearButton 标题颜色，默认：[[UIColor blueColor] colorWithAlphaComponent:0.5f]
-        _textField1.ba_clearButtonTitleColor = BAKit_Color_Green;
+        _textField1.ba_clearButtonTitleColor = BAKit_Color_Green_pod;
         
         [self.view addSubview:_textField1];
     }
