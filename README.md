@@ -13,6 +13,7 @@
 * 5、一行代码搞定 输入的内容是否为空
 * 6、一行代码搞定 选中所有文字、选中指定范围的文字
 * 7、一行代码搞定 输入历史记录
+* 8、新增 一次性移除掉 NSUserDefaults 中保存的所有的数据 封装
 
 ## 2、图片示例
 ![BATextField](https://github.com/BAHome/BATextField/blob/master/Images/BATextField.gif)
@@ -53,8 +54,14 @@
  欢迎使用 BAHome 系列开源代码 ！
  如有更多需求，请前往：https://github.com/BAHome
  
- 项目源码地址：
- OC 版 ：https://github.com/BAHome/BAWKWebView
+  项目源码地址：
+ OC 版 ：https://github.com/BAHome/BATextField
+ 
+ 
+ 最新更新时间：2017-08-21 【倒叙】<br>
+ 最新Version：【Version：1.0.3】<br>
+ 更新内容：<br>
+ 1.0.3.1、新增 一次性移除掉 NSUserDefaults 中保存的所有的数据 封装<br>
  
  最新更新时间：2017-06-24 【倒叙】
  最新Version：【Version：1.0.2】
@@ -277,6 +284,12 @@
  欢迎使用 [【BAHome】](https://github.com/BAHome) 系列开源代码 ！
  如有更多需求，请前往：[【https://github.com/BAHome】](https://github.com/BAHome) 
  
+ 
+ 最新更新时间：2017-08-21 【倒叙】<br>
+ 最新Version：【Version：1.0.3】<br>
+ 更新内容：<br>
+ 1.0.3.1、新增 一次性移除掉 NSUserDefaults 中保存的所有的数据 封装<br>
+ 
  最新更新时间：2017-06-24 【倒叙】
  最新Version：【Version：1.0.2】
  更新内容：
@@ -343,7 +356,7 @@ git：[https://github.com/CrazyCoderShi](https://github.com/CrazyCoderShi) <br>
 > 开发使用 最新版本 Xcode，理论上支持 iOS 8 及以上版本，如有版本适配问题，请及时反馈！多谢合作！
 
 ## 9、感谢
-> 感谢 BAHome 团队成员倾力合作，后期会推出一系列 常用 UI 控件的封装，大家有需求得也可以在 issue 提出，如果合理，我们会尽快推出新版本！<br>
+> 感谢 [BAHome](https://github.com/BAHome) 团队成员倾力合作，后期会推出一系列 常用 UI 控件的封装，大家有需求得也可以在 issue 提出，如果合理，我们会尽快推出新版本！<br>
 
-> BAHome 的发展离不开小伙伴儿的信任与推广，再次感谢各位小伙伴儿的支持！
+>  [BAHome](https://github.com/BAHome)  的发展离不开小伙伴儿的信任与推广，再次感谢各位小伙伴儿的支持！
 

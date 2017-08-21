@@ -16,7 +16,7 @@
 		C4297C921EF5241D005DDC30 /* UITextField+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4297C8F1EF5241D005DDC30 /* UITextField+BAKit.m */; };
 		C4297C931EF5241D005DDC30 /* UITextField+BAHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = C4297C911EF5241D005DDC30 /* UITextField+BAHistory.m */; };
 		C4297C981EF525CB005DDC30 /* UIView+BAFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C4297C971EF525CB005DDC30 /* UIView+BAFrame.m */; };
-		C4297C9B1EF5265B005DDC30 /* BAKit_UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = C4297C9A1EF5265B005DDC30 /* BAKit_UserDefaults.m */; };
+		C48056BC1F4A8EA1006FBC6E /* BAKit_UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = C48056BB1F4A8EA1006FBC6E /* BAKit_UserDefaults.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,9 +37,9 @@
 		C4297C941EF5244B005DDC30 /* BATextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATextField.h; sourceTree = "<group>"; };
 		C4297C961EF525CB005DDC30 /* UIView+BAFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BAFrame.h"; sourceTree = "<group>"; };
 		C4297C971EF525CB005DDC30 /* UIView+BAFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BAFrame.m"; sourceTree = "<group>"; };
-		C4297C991EF5265B005DDC30 /* BAKit_UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAKit_UserDefaults.h; sourceTree = "<group>"; };
-		C4297C9A1EF5265B005DDC30 /* BAKit_UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAKit_UserDefaults.m; sourceTree = "<group>"; };
 		C4738C301EFCBA4000608E17 /* BAKit_ConfigurationDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAKit_ConfigurationDefine.h; sourceTree = "<group>"; };
+		C48056BA1F4A8EA1006FBC6E /* BAKit_UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAKit_UserDefaults.h; sourceTree = "<group>"; };
+		C48056BB1F4A8EA1006FBC6E /* BAKit_UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAKit_UserDefaults.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +105,8 @@
 				C4297C911EF5241D005DDC30 /* UITextField+BAHistory.m */,
 				C4297C961EF525CB005DDC30 /* UIView+BAFrame.h */,
 				C4297C971EF525CB005DDC30 /* UIView+BAFrame.m */,
-				C4297C991EF5265B005DDC30 /* BAKit_UserDefaults.h */,
-				C4297C9A1EF5265B005DDC30 /* BAKit_UserDefaults.m */,
+				C48056BA1F4A8EA1006FBC6E /* BAKit_UserDefaults.h */,
+				C48056BB1F4A8EA1006FBC6E /* BAKit_UserDefaults.m */,
 			);
 			path = BATextField;
 			sourceTree = "<group>";
@@ -188,7 +188,7 @@
 				C4297C7B1EF523C3005DDC30 /* AppDelegate.m in Sources */,
 				C4297C781EF523C3005DDC30 /* main.m in Sources */,
 				C4297C921EF5241D005DDC30 /* UITextField+BAKit.m in Sources */,
-				C4297C9B1EF5265B005DDC30 /* BAKit_UserDefaults.m in Sources */,
+				C48056BC1F4A8EA1006FBC6E /* BAKit_UserDefaults.m in Sources */,
 				C4297C931EF5241D005DDC30 /* UITextField+BAHistory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
