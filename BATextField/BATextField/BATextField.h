@@ -26,6 +26,10 @@
  项目源码地址：
  OC 版 ：https://github.com/BAHome/BATextField
  
+ 最新更新时间：2017-09-15 【倒叙】<br>
+ 最新Version：【Version：1.0.4】<br>
+ 更新内容：<br>
+ 1.0.4.1、新增 小数点后几位数判断，可以设置小数点后 N位数，还可以判断首位数是否可以为 0<br>
  
  最新更新时间：2017-08-21 【倒叙】<br>
  最新Version：【Version：1.0.3】<br>

@@ -14,6 +14,8 @@
 * 6、一行代码搞定 选中所有文字、选中指定范围的文字
 * 7、一行代码搞定 输入历史记录
 * 8、新增 一次性移除掉 NSUserDefaults 中保存的所有的数据 封装
+* 9、新增 小数点后几位数判断，可以设置小数点后 N位数，还可以判断首位数是否可以为 0<br>
+
 
 ## 2、图片示例
 ![BATextField](https://github.com/BAHome/BATextField/blob/master/Images/BATextField.gif)
@@ -57,6 +59,10 @@
   项目源码地址：
  OC 版 ：https://github.com/BAHome/BATextField
  
+ 最新更新时间：2017-09-15 【倒叙】<br>
+ 最新Version：【Version：1.0.4】<br>
+ 更新内容：<br>
+ 1.0.4.1、新增 小数点后几位数判断，可以设置小数点后 N位数，还可以判断首位数是否可以为 0<br>
  
  最新更新时间：2017-08-21 【倒叙】<br>
  最新Version：【Version：1.0.3】<br>
@@ -94,51 +100,76 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@interface UITextField (BAKit)
+@interface UITextField (BAKit)<UITextViewDelegate>
 
 /**
- placeholder：文字颜色，默认：黑色
+ UITextField：placeholder：文字颜色，默认：黑色
  */
 @property(nonatomic, strong) UIColor *ba_placeholderColor;
 
 /**
- placeholder：文字字体
+ UITextField：placeholder：文字字体
  */
 @property(nonatomic, strong) UIFont *ba_placeholderFont;
 
 /**
- 限制最大输入长度
+ UITextField：限制最大输入长度
  */
-@property (assign, nonatomic)  NSInteger ba_maxLength;
+@property(nonatomic, assign) NSInteger ba_maxLength;
+
+/**
+ UITextField：小数点后的最大位数，默认：无，
+ 注意：如果需要使用此方法，键盘默认为 UIKeyboardTypeDecimalPad，请务必遵循两步：
+ // 先设置 _textField2 的代理
+ [_textField2 ba_textField_setDelegate:_textField2];
+ // 再设置小数点后的位数，如果不使用 ba_maxDecimalPointNumber ，请务必删除 上面的代理，以免出现其他异常
+ _textField2.ba_maxDecimalPointNumber = 2;
+ */
+@property(nonatomic, assign) NSInteger ba_maxDecimalPointNumber;
+
+/**
+ UITextField：是否包含小数点，默认：NO
+ */
+@property(nonatomic, assign) BOOL ba_isHaveDecimalPoint;
+
+/**
+ UITextField：首位数是否可以为 0，默认：NO
+ */
+@property(nonatomic, assign) BOOL ba_isFirstNumberZero;
 
 
 /**
- 判断 UITextField 输入的内容是否为空
+ UITextField：首先设置代理
+
+ @param delegate delegate description
+ */
+- (void)ba_textField_setDelegate:(id<UITextViewDelegate>)delegate;
+
+/**
+ UITextField：判断 UITextField 输入的内容是否为空
  
  @return YES，NO
  */
 - (BOOL)ba_textField_isEmpty;
 
 /**
- 选中所有文字
+ UITextField：选中所有文字
  */
 - (void)ba_textField_selectAllText;
 
 /**
- 当前选中的字符串范围
+ UITextField：当前选中的字符串范围
 
  @return NSRange
  */
 - (NSRange)ba_textField_selectedRange;
 
 /**
- 选中指定范围的文字
+ UITextField：选中指定范围的文字
 
  @param range NSRange 范围
  */
 - (void)ba_textField_setSelectedRange:(NSRange)range;
-
-@end
 ```
 
 ## UITextField+BAHistory.h
@@ -193,17 +224,17 @@
 
 ### demo 示例
 ```
-// 示例1：
+// 示例1：自定义 placeholder 字体和颜色，限制最大位数为 6 位！
 - (UITextField *)textField
 {
     if (!_textField)
     {
         _textField = [UITextField new];
         _textField.placeholder = @"这里是 placeholder！限制最大位数：6！";
-        _textField.backgroundColor = BAKit_Color_Gray_11;
+        _textField.backgroundColor = BAKit_Color_Gray_11_pod;
         
         // placeholder：文字颜色
-        _textField.ba_placeholderColor = BAKit_Color_Green;
+        _textField.ba_placeholderColor = BAKit_Color_Green_pod;
         // placeholder：文字字体
         _textField.ba_placeholderFont = [UIFont systemFontOfSize:11];
         // 限制最大输入长度
@@ -214,7 +245,7 @@
     return _textField;
 }
     
-// 示例2：加载普通 URL
+// 示例2：点击 return 后，可以保存输入历史，限制最大位数为 6 位！
 - (UITextField *)textField1
 {
     if (!_textField1)
@@ -277,6 +308,35 @@
     return NO;
 }
 
+// 示例3：限制输入小数点后 N 位数，首字母是否可以为 0
+- (UITextField *)textField2
+{
+    if (!_textField2)
+    {
+        _textField2 = [UITextField new];
+        _textField2.placeholder = @"限制输入小数点后 2 位！";
+        _textField2.backgroundColor = BAKit_Color_Gray_11_pod;
+        _textField2.keyboardType = UIKeyboardTypeDecimalPad;
+        
+        // placeholder：文字颜色，默认：黑色
+//        _textField2.ba_placeholderColor = BAKit_Color_Orange_pod;
+        // placeholder：文字字体
+//        _textField2.ba_placeholderFont = [UIFont boldSystemFontOfSize:13];
+        // 限制最大输入长度
+//        _textField2.ba_maxLength = 11;
+
+        // 先设置 _textField2 的代理
+        [_textField2 ba_textField_setDelegate:_textField2];
+        // 再设置小数点后的位数，如果不使用 ba_maxDecimalPointNumber ，请务必删除 上面的代理，以免出现其他异常
+        _textField2.ba_maxDecimalPointNumber = 2;
+        // 设置首位数是否可以为 0，默认：NO
+        _textField2.ba_isFirstNumberZero = YES;
+        
+        [self.view addSubview:_textField2];
+    }
+    return _textField2;
+}
+
 其他示例可下载 demo 查看源码！
 ```
 
@@ -284,6 +344,10 @@
  欢迎使用 [【BAHome】](https://github.com/BAHome) 系列开源代码 ！
  如有更多需求，请前往：[【https://github.com/BAHome】](https://github.com/BAHome) 
  
+ 最新更新时间：2017-09-15 【倒叙】<br>
+ 最新Version：【Version：1.0.4】<br>
+ 更新内容：<br>
+ 1.0.4.1、新增 小数点后几位数判断，可以设置小数点后 N位数，还可以判断首位数是否可以为 0<br>
  
  最新更新时间：2017-08-21 【倒叙】<br>
  最新Version：【Version：1.0.3】<br>
