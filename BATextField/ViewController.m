@@ -112,7 +112,7 @@
     if (!_textField1)
     {
         _textField1 = [UITextField new];
-        _textField1.placeholder = @"点击 return 后，可以保存输入历史！【限制输入11位】";
+        _textField1.placeholder = @"点击 return 后，可以保存输入历史！【限制输入7位】";
         _textField1.backgroundColor = BAKit_Color_Gray_11_pod;
         _textField1.delegate = self;
         
@@ -121,7 +121,7 @@
         // placeholder：文字字体
         _textField1.ba_placeholderFont = [UIFont boldSystemFontOfSize:13];
         // 限制最大输入长度
-        _textField1.ba_maxLength = 11;
+        _textField1.ba_maxLength = 7;
         // textFieldID：识别 ID，要用到历史记录，请务必添加
         _textField1.ba_textFieldID = @"user_account";
         
@@ -179,7 +179,7 @@
 {
     if (!_label2)
     {
-        NSString *msg = @"2、点击 return 后，可以保存输入历史，限制最大位数为 6 位！";
+        NSString *msg = @"2、点击 return 后，可以保存输入历史，限制最大位数为 7 位！";
         _label2 = [self ba_addLabelWithMsg:msg];
         
         [self.view addSubview:_label2];
