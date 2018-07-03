@@ -20,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C3AE4AB20EB555D004458C7 /* BATextField_Version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BATextField_Version.h; sourceTree = "<group>"; };
 		C4297C731EF523C3005DDC30 /* BATextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BATextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4297C771EF523C3005DDC30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C4297C791EF523C3005DDC30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -107,6 +108,7 @@
 				C4297C971EF525CB005DDC30 /* UIView+BAFrame.m */,
 				C48056BA1F4A8EA1006FBC6E /* BAKit_UserDefaults.h */,
 				C48056BB1F4A8EA1006FBC6E /* BAKit_UserDefaults.m */,
+				9C3AE4AB20EB555D004458C7 /* BATextField_Version.h */,
 			);
 			path = BATextField;
 			sourceTree = "<group>";
